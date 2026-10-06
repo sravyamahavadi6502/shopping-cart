@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Skincare Store &amp; Shopping Cart&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg: #f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card-bg: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--primary: #0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent: #2563eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent-hover: #1d4ed8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--danger: #ef4444;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text: #334155;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text-muted: #64748b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--border: #e2e8f0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { background-color: var(--bg); color: var(--text); padding: 2rem; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header { text-align: center; margin-bottom: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header h1 { font-size: 2rem; color: var(--primary); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header p { color: var(--text-muted); font-size: 0.95rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1fr 380px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Product Catalog Grid */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.catalog {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.product-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 1px 3px rgba(0,0,0,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.product-title { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.product-price { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.add-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.add-btn:hover { background-color: var(--accent); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Cart Drawer/Section */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: fit-content;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 8px rgba(0,0,0,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-section h2 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-empty { color: var(--text-muted); text-align: center; padding: 2rem 0; font-style: italic; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px dashed var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-item-details { display: flex; flex-direction: column; gap: 0.2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-item-name { font-weight: 600; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-item-price { font-size: 0.85rem; color: var(--text-muted); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.qty-controls {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.qty-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.qty-btn:hover { background: var(--border); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.delete-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--danger);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-left: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cart-footer { margin-top: 1.5rem; border-top: 2px solid var(--border); padding-top: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.total-row { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold; color: var(--primary); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.checkout-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.checkout-btn:hover { background-color: #059669; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.container { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Skincare Essentials&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Shopping Cart UI&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Catalog Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="catalog" id="catalog"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Cart Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cart-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Shopping Cart&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="cart-list"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cart-footer" id="cart-footer" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="total-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Total Cost:&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="cart-total"&gt;₹0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="checkout-btn" onclick="checkout()"&gt;Checkout&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Mirroring C Catalog Data</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const products = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Moisturiser", cost: 200 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Facecream", cost: 150 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Facewash", cost: 100 },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ name: "Sunscreen", cost: 250 }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Linked list / cart state mirror</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let cart = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Render Product Cards</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderCatalog() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const catalogEl = document.getElementById("catalog");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>catalogEl.innerHTML = products.map(p =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="product-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="product-title"&gt;${p.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="product-price"&gt;₹${p.cost}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="add-btn" onclick="addItem('${p.name}', ${p.cost})"&gt;Add to Cart&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Add / Update item (Matches C checkDuplicate logic)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addItem(name, cost) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const existing = cart.find(item =&gt; item.name === name);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (existing) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>existing.quantity += 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cart.push({ name, cost, quantity: 1 });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderCart();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Change quantity (Matches C changequantity logic)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateQuantity(name, delta) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const item = cart.find(i =&gt; i.name === name);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (item) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>item.quantity += delta;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (item.quantity &lt;= 0) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>deleteItem(name);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderCart();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Delete item (Matches C deleteitem logic)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function deleteItem(name) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cart = cart.filter(item =&gt; item.name !== name);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderCart();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Checkout (Matches C checkout logic)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function checkout() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (cart.length === 0) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let total = cart.reduce((sum, item) =&gt; sum + (item.cost * item.quantity), 0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>alert(`Order placed successfully!\nTotal Amount: ₹${total}`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cart = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderCart();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Render Cart Contents &amp; Total Cost</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderCart() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const cartListEl = document.getElementById("cart-list");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const footerEl = document.getElementById("cart-footer");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const totalEl = document.getElementById("cart-total");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (cart.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cartListEl.innerHTML = `&lt;div class="cart-empty"&gt;Your cart is currently empty.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footerEl.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>let total = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cartListEl.innerHTML = cart.map(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const itemTotal = item.cost * item.quantity;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>total += itemTotal;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cart-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cart-item-details"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="cart-item-name"&gt;${item.name}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="cart-item-price"&gt;₹${item.cost} × ${item.quantity} = ₹${itemTotal}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="qty-controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="qty-btn" onclick="updateQuantity('${item.name}', -1)"&gt;-&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;${item.quantity}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="qty-btn" onclick="updateQuantity('${item.name}', 1)"&gt;+&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="delete-btn" onclick="deleteItem('${item.name}')"&gt;✕&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>totalEl.innerText = `₹${total}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>footerEl.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Initialize</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderCatalog();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderCart();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
